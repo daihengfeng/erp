@@ -1,0 +1,1276 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    background-color: transparent;
+    position: relative;
+}
+
+h1 {
+    letter-spacing: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main-bg {
+    background-image: url("../img/main-bg/skin-blue.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-blue {
+    background-image: url("../img/main-bg/skin-blue.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-chrome {
+    background-image: url("../img/main-bg/skin-chrome.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-city {
+    background-image: url("../img/main-bg/skin-city.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-cloth {
+    background-image: url("../img/main-bg/skin-cloth.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-greenish {
+    background-image: url("../img/main-bg/skin-greenish.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.skin-kiwi {
+    background-image: url("../img/main-bg/skin-kiwi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.login-page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #111111;
+}
+
+#formPanel {
+    width: 600px;
+    margin: auto;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .8;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100%;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: autoChange;
+    animation-name: autoChange;
+}
+
+@-webkit-keyframes autoChange {
+
+    from, to {
+        background-image: url("../img/green4.jpg");
+        background-size: cover;
+    }
+    15% {
+        background-image: url("../img/green4.jpg");
+        background-size: cover;
+    }
+    35% {
+        background-image: url("../img/nicebg-9.jpg");
+        background-size: cover;
+    }
+    55% {
+        background-image: url("../img/nicebg-8.jpg");
+        background-size: cover;
+    }
+    75% {
+        background-image: url("../img/nicebg1.jpg");
+        background-size: cover;
+    }
+    95% {
+        background-image: url("../img/green-bg.png");
+        background-size: cover;
+    }
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    z-index: 700;
+    transition: width 300ms ease;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-flow: column;
+}
+
+.main-head {
+    width: 100%;
+    /*border-bottom: 1px solid #10151d;*/
+}
+
+.main-content > .content-heading {
+    width: 100%;
+    height: 60px;
+    flex: 0 0 60px;
+    max-height: 60px;
+    /*border-bottom: 1px solid #222d32;*/
+    /*background-color: #f9f9f9;*/
+    /*background: #1a2226;*/
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 999;
+}
+
+#headNavLeft,
+#headNavRight {
+    height: 60px;
+    position: relative;
+    display: flex;
+}
+
+#headNavLeft {
+    float: left;
+}
+
+#headNavRight {
+    float: right;
+    margin-right: 15px;
+}
+
+#bigTitle {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 21px !important;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-family: "苹方", "微软雅黑", sans-serif;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    opacity: .8;
+}
+
+#bigTitle:hover {
+    opacity: 1;
+}
+
+#bigTitle > i {
+    /*color: #fff;*/
+    color: #ec521b;
+    opacity: 1;
+    font-size: 22px;
+    margin-right: 10px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    display: block;
+    transition: all 300ms;
+
+}
+
+.sidebar-menu li.header {
+    border-top: 1px solid #181f24;
+}
+
+#updatePassword {
+    padding: 1px;
+    font-size: 12px;
+}
+
+.admin-box > .box:nth-child(2) {
+    padding-left: 15px;
+}
+
+#updatePassword {
+    padding: 2px 5px !important;
+}
+
+.adminimg {
+    width: 70px;
+    height: 69px;
+    display: block;
+    border: 1px solid rgba(221, 221, 221, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.adminimg > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.admin-box-left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.admin-box-right {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    padding-left: 5px;
+}
+
+.admin-box-right > span {
+    display: block;
+    width: 190px;
+    padding: 0px 5px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.admin-box-right > #btnbox {
+    padding: 10px 5px 0px;
+
+}
+
+.admin-box-right > span#adminIp {
+    font-size: 15px;
+    color: rgba(221, 221, 221, 0.7);
+}
+
+#adminAccount {
+    font-size: 16px;
+}
+
+#adminIp {
+    font-size: 16px;
+    font-variant: all-small-caps;
+}
+
+.admin-box > .box:nth-child(2) {
+    flex: 1;
+}
+
+.admin-box > .padding-top,
+.hamburgerNavbar {
+    width: 100%;
+    font-size: 12px;
+    height: 35px;
+    flex: 0 0 35px;
+    background-color: #fff;
+}
+
+.content-under-heading {
+    position: relative;
+    z-index: 999;
+}
+
+.main-content {
+    /*border-left: 1px solid #ddd;*/
+}
+
+.headBtn {
+    width: 58px;
+    height: 100%;
+    /*background: #222d32;*/
+    background: transparent;
+    color: rgba(255, 255, 255, .78);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-decoration: none;
+    outline: 0 !important;
+}
+
+.headBtn:hover,
+.headBtn:active{
+    color: #fff;
+    text-decoration: none !important;
+    /*background: #43565c !important;*/
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.headBtn:focus {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+
+/*-----------*/
+.my-content {
+    width: 100%;
+    min-width: 1059px !important;
+}
+
+.content-fluid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.content-body {
+    width: 100%;
+    flex: 1;
+    border: 1px solid transparent;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+#frame-contect {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.content-heading-wrap {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+#frame-contect::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    /*background-color: #ddd;*/
+}
+
+/*滑块*/
+
+#frame-contect::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+#frame-contect::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+
+/*滑道*/
+
+#frame-contect::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #333;
+    border-radius: 10px;
+}
+
+.table {
+    border-radius: 4px;
+}
+
+.table td {
+    padding: 5px !important;
+    font-family: 苹方, "微软雅黑", sans-serif;
+}
+
+.my-table a {
+    width: 80px;
+}
+
+.thead-val {
+    text-align: center;
+}
+
+.table-val {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 2px 0 2px 0;
+    font-size: 16px !important;
+    /*border: 1px solid red;*/
+    display: flex;
+    /*display: inline-flex;*/
+    align-items: center;
+    color: #f1f1f1;
+    justify-content: center;
+    font-family: 苹方, "微软雅黑", sans-serif;
+}
+
+.table-val.text-right {
+    justify-content: flex-end;
+}
+
+.table-val > .btn {
+    margin: 0 5px;
+    width: 45px;
+}
+
+th, td {
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.table td {
+    font-size: 19px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tops {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.tops2 {
+    display: inline-flex;
+}
+
+.searchWrap {
+    float: right;
+    position: relative;
+
+}
+
+.bottoms {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+
+.table {
+    width: 100% !important;
+    overflow: auto;
+}
+
+.dataTables_scroll {
+    background-color: transparent;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.content-fluid::-webkit-scrollbar-track,
+.dataTables_scrollBody::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.content-fluid::-webkit-scrollbar,
+.dataTables_scrollBody::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.content-fluid::-webkit-scrollbar-thumb,
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+    background-color: #999;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/*-------------------------*/
+.table > tbody tr {
+    /*background-color: #fff;*/
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table > tbody > tr td {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f1f1f1;
+}
+
+.tfoot-hide > tr > th {
+    color: transparent !important;
+}
+
+.table > tfoot > tr th,
+.table > thead > tr th {
+    color: #ddd;
+}
+
+.table:not(.table-o) > tfoot > tr th,
+.table:not(.table-o) > thead > tr th {
+    border: 0 !important;
+}
+
+.table-o > tfoot > tr th,
+.table-o > thead > tr th {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.table.my-hover > tbody > tr {
+    cursor: pointer !important;
+}
+
+.table.my-hover > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.66) !important;
+}
+
+.dataTables_scrollHead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    /*background-image: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, 0.1));*/
+}
+
+table.dataTable {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*.dataTables_scrollHead {*/
+/*box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+.dataTables_scrollFoot {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    /*background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .7));*/
+}
+
+.my-table thead tr {
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;*/
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.my-table tfoot tr {
+    /*border-top: 1px solid rgba(255, 255, 255, 0.1) !important;*/
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.table.table-bordered {
+    /*border:none !important;*/
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dataTables_scrollFoot {
+    /*border-top: 1px solid #ccc;*/
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    width: 300px !important;
+    height: 35px !important;
+    margin-left: 15px !important;
+}
+
+.btn-black {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-black:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+.btn-black:focus, .btn-black.focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.btn-black.disabled, .btn-black:disabled {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-black:not(:disabled):not(.disabled):active, .btn-black:not(:disabled):not(.disabled).active,
+.show > .btn-black.dropdown-toggle {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+}
+
+.btn-black:not(:disabled):not(.disabled):active:focus, .btn-black:not(:disabled):not(.disabled).active:focus,
+.show > .btn-black.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    /*border: 1px solid red;*/
+}
+
+#errorBox .modal-title > .icon-warning2 {
+    margin-right: 5px;
+    color: #C93B3E;
+}
+
+#maintenanceModal .modal-title > .icon-warning2 {
+    margin-right: 5px;
+    color: #222D32;
+}
+
+/*----------------*/
+.page-header > h2,
+.page-header > h1 {
+    color: #f5f5f5;
+}
+
+.page-header > h1 > i,
+.page-header > h2 > i {
+    color: rgba(221, 221, 221, 0.8) !important;
+}
+
+.table-container {
+    width: 100%;
+    position: relative;
+    /*border: 1px solid red;*/
+}
+
+.emp-form {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* 标准的语法（必须放在最后） */
+    /*background-color: rgba(0, 0, 0, 0.25);*/
+    padding: 15px 25px 30px;
+    /*color: #d5e6ee;*/
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.table-control {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* 标准的语法（必须放在最后） */
+
+    /*background-color: rgba(0, 0, 0, 0.25);*/
+    padding: 30px 30px 15px 30px;
+    /*color: #d5e6ee;*/
+    color: #f1f1f1;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.table-control-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.table-control-row > label,
+.table-control-row > .form-control {
+    display: inline-block;
+}
+
+#selectOrderForm .form-inline {
+    width: 100%;
+}
+
+.table-control .form-group,
+.form-inline .form-group {
+    display: inline-block !important;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.table-label {
+    text-align: left;
+    width: 80px;
+    font-family: "苹方", "微软雅黑", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #f1f1f1;
+}
+
+.dropdown-menu.slidersMenu {
+    width: 300px !important;
+}
+
+.menu-row {
+    width: 100%;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-row label {
+    font-size: 16px;
+}
+
+.dataTables_filter input,
+.table .form-control,
+.table-control .form-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+select.form-control > option {
+    background-color: #fff;
+    color: #111;
+}
+
+input.form-control:focus {
+    cursor: text;
+}
+
+.btn.solid {
+    background: rgba(0, 0, 0, 0.3);
+    /*background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%);*/
+    /*background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 1)));*/
+    /*background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%);*/
+    /*background: -o-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%);*/
+    /*background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%);*/
+    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%);*/
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    color: #fff;
+    outline: 0 !important;
+    font-family: "Open Sans",sans-serif;
+}
+
+.btn.solid:hover {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.btn.solid:active {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.btn.hollow {
+    font-family: "Open Sans", sans-serif;
+    color: #f1f1f1;
+    outline: 0 !important;
+    background: none !important;
+    filter: none !important;
+    background: rgba(0, 0, 0, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+}
+
+.btn.hollow:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn.hollow:active {
+    background: rgba(255, 255, 255, .88) !important;
+    color: #000;
+}
+
+.pagination > li.previous > a,
+.pagination > li.next > a {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    background: transparent;
+    color: #ddd !important;
+}
+
+.pagination > li.previous:hover > a,
+.pagination > li.next:hover > a {
+    background: rgba(255, 255, 255, 0.45) !important;
+
+}
+
+.paginate_button a {
+    outline: none !important;
+    color: #333 !important;
+}
+
+.paginate_button.active a {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #f1f1f1 !important;
+}
+
+.paginate_button a {
+    background-color: transparent !important;
+    color: #f1f1f1 !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+
+}
+
+.paginate_button a:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.bg-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+.bg-list li {
+    width: 20%;
+    position: relative;
+    padding: 10px;
+}
+
+.bg-list li .bgImgBox {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 3px solid #111;
+    cursor: pointer;
+    position: relative;
+    /*transition: all 200ms ease;*/
+}
+
+.bg-list li .bgImgBox:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+}
+
+.my-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.opacity-black {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.modal-backdrop {
+    background-color: transparent !important;
+}
+
+.bg-list li .bgImgBox:hover:before {
+    opacity: 1;
+}
+
+.bg-list li .bgImgBox img {
+    width: 100%;
+}
+
+.bg-list li .bgImgBox:active:before {
+    filter: brightness(.5);
+}
+
+.showThisDetails {
+    outline: 0 !important;
+}
+
+.form-horizontal > .page-header {
+    padding-bottom: 9px;
+    margin: 0px 0 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.form-help {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgba(221, 221, 221, 0.8);
+    font-size: 13px;
+}
+
+.icon-wrap {
+    width: 30px;
+    height: 30px;
+    opacity: .9;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0 !important;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.success-icon {
+    color: #54AC45;
+}
+
+.my-color {
+    color: #f1f1f1;
+}
+
+.iconModal-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.my-checkbox {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    border: 1px solid red;
+    display: inline-block;
+
+}
+
+.jumbotron.my-jumbotron {
+    line-height: 2.5;
+    color: #fff;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* 标准的语法（必须放在最后） */
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.jumbotron.my-jumbotron > h1 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.jumbotron.my-jumbotron > p {
+    font-family: 苹方, "微软雅黑", sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.well.table-control {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/*日期选择器的外层容器*/
+.ui-datepicker {
+    width: 100%;
+    /*background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); !* Safari 5.1 - 6.0 *!*/
+    /*background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); !* Opera 11.1 - 12.0 *!*/
+    /*background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); !* Firefox 3.6 - 15 *!*/
+    /*background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); !* 标准的语法（必须放在最后） *!*/
+    /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+    /*border: 1px solid red !important;*/
+    background: transparent !important;
+    color: #f5f5f5;
+    padding: 20px !important;
+    border-radius: 5px;
+    border: 0 !important;
+    overflow: auto;
+}
+
+/*日期选择器的头部容器*/
+.ui-datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px !important;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-color: rgba(0, 0, 0, 0.35);
+    border-radius: 4px !important;
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev {
+    width: 2.8em !important;
+    height: 2.8em !important;
+}
+
+/*用于选择上一月的控件*/
+.ui-datepicker-prev {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/*用于选择下一月的控件*/
+.ui-datepicker-next {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/*日期选择器包含月和年的标题容器*/
+.ui-datepicker-title {
+    color: #f5f5f5;
+    font-family: 苹方, "微软雅黑", sans-serif;
+}
+
+/*包含日历的表格*/
+.ui-datepicker-calendar {
+    width: 100%;
+    /*border: 1px solid red !important;*/
+    border-collapse: collapse !important;
+}
+
+/*周末的单元格*/
+.ui-datepicker-week-end {
+
+}
+
+/*发生在某月但不是当前月天数的单元格*/
+.ui-datepicker-other-month {
+
+}
+
+/*用户不可选择的单元格*/
+.ui-datepicker-unselectable {
+}
+
+/*已选中日期的单元格。*/
+.ui-datepicker-current-day {
+    color: #fff !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/*当天日期的单元格*/
+.ui-datepicker-today {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/*非本月日期的单元格*/
+.ui-datepicker-other-month {
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    opacity: .5;
+}
+
+.ui-datepicker-calendar th {
+    font-family: 苹方, "微软雅黑", sans-serif;
+    padding: 15px !important;
+    font-size: 15px;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0px !important;
+}
+
+.ui-datepicker-calendar td a {
+    padding: 8px !important;
+    background: transparent !important;
+    color: #f1f1f1 !important;
+    font-size: 15px;
+    text-align: center !important;
+    border-color: rgba(241, 241, 241, 0.3) !important;
+    transition: all 200ms ease;
+}
+
+.ui-datepicker-calendar td > a:not(.ui-state-active):not(.ui-state-highlight):hover {
+    background: rgba(0, 0, 0, 0.25) !important;
+}
+
+/*按钮面板（buttonpane)*/
+.ui-datepicker-buttonpane {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+/*用于选择当天日期的按钮*/
+.ui-datepicker-buttonpane button, .ui-datepicker-current {
+    /*background-image: none !important;*/
+    background: #fff !important;
+    padding: 5px 12px !important;
+    line-height: 1.5;
+    margin: 5px 0 0 !important;
+    border-radius: 4px;
+    font-family: "苹方", "微软雅黑", sans-serif;
+    font-weight: 500;
+    color: #000 !important;
+}
+
+.panel-black {
+    background: transparent;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.panel-black > .panel-heading > .panel-control {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.panel-black:hover > .panel-heading .panel-control {
+    opacity: 1;
+}
+
+.panel-black > .panel-heading > .panel-control a {
+    color: #bdbdbd !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.panel-black > .panel-heading > .panel-control a:hover {
+    color: #fff !important;
+}
+
+.panel-black > .panel-heading > .panel-control a:active {
+    color: #b3b3b3 !important;
+}
+
+.panel-black > .panel-heading {
+    padding: 12px 15px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.55) !important;
+}
+
+.panel-black > .panel-heading > .panel-title {
+    color: rgba(241, 241, 241, 0.88);
+}
+
+.panel-black .panel-body {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)); /* 标准的语法（必须放在最后） */
+}
+
+#msgNothing {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: rgba(221, 221, 221, 0.55);
+}
+
+.projectinfo {
+    line-height: 2;
+}
+
+/*.dropdown-hover:hover > .dropdown-menu{*/
+    /*display: block;*/
+/*}*/
+
+.dropdown-hover:hover > .headBtn{
+    color: #fff;
+    text-decoration: none !important;
+    /*background: #43565c !important;*/
+    background: rgba(0, 0, 0, 0.25);
+}
+.inner-pages{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#error-page {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    min-height: 200px;
+    text-align: center;
+    padding: 30px 15px;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+
+}
+
+#error-page h1 {
+    font-weight:300 !important;
+    font-size: 60px !important;
+    text-shadow: 0 0 10px #fff;
+}
+
+#error-page p.enText{
+    font-size: 16px;
+    font-family: "Open Sans",sans-serif;
+    color: rgba(241, 241, 241, 0.88);
+}
+
+#error-page p.cnText {
+    font-size: 18px;
+    font-family:"苹方","微软雅黑", sans-serif;
+}
+
+
+.error-404{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+    color: #fff;
+    text-align: center;
+    padding: 55px 0 35px 0;
+}
+
+
+.btn-404-wrap{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

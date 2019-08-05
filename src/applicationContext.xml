@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- 开启注解扫描包 -->
+	<context:component-scan base-package="com"/>
+	
+	<!-- 先配置C3P0的连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql:///erp?characterEncoding=utf-8"/>
+		<property name="user" value="root"/>
+		<property name="password" value="123"/>
+	</bean>
+	
+	<!-- LocalSessionFactoryBean加载配置文件 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 先加载连接池 -->
+		<property name="dataSource" ref="dataSource"/>
+		<!-- 加载方言，加载可选 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		
+		<!-- 引入映射的配置文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/domain/Users.hbm.xml</value>
+				<value>com/domain/Department.hbm.xml</value>
+				<value>com/domain/Employee.hbm.xml</value>
+				<value>com/domain/Role.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+		<!-- 配置事物 -->
+	<!-- 事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<!-- 数据源 -->
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 
+	spring给我们提供的AOp
+	通知 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- 传播行为 -->
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="edit*" propagation="REQUIRED" />
+			<tx:method name="Modify*" propagation="REQUIRED" />
+			<tx:method name="newly*" propagation="REQUIRED" read-only="false"/>
+<!-- 			<tx:method name="find*" read-only="true" /> -->
+<!-- 			<tx:method name="get*"  read-only="true" /> -->
+<!-- 			<tx:method name="select*"  read-only="true" /> -->
+<!-- 			<tx:method name="query*"  read-only="true" /> -->
+		
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 切面 -->
+<aop:config>
+    <aop:advisor advice-ref="txAdvice"
+        pointcut="execution(* com.service.*.*(..))" />
+</aop:config>
+	
+	
+</beans>

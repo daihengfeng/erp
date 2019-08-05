@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.domain.Users" table="users">
+		<id name="user_Id" column="User_Id" >
+			<generator class="uuid"/>
+		</id>
+		
+		<property name="user_Name" column="User_Name"/>
+		<property name="user_Password" column="User_Password"/>
+	
+		<property name="role_Id" column="Role_Id"/>
+		<property name="user_State" column="User_State"/>
+		<property name="employee_Id" column="Employee_Id"/>
+		<property name="user_Desc" column="User_Desc"/>
+		<property name="remark1"/>
+		<property name="remark2"/>
+	
+	</class>
+</hibernate-mapping>    

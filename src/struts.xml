@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+<!-- 	<constant name="" value=""></constant> -->
+	<!--  设置上传文件的大小  默认是2M-->
+	<package name="erpActionss" namespace="/" extends="struts-default">
+		<!-- 采用通配符的方法访问Action -->
+		<!--  type="redirect"-->
+		<action name="ErpAction_*" class="erpAction" method="{1}">
+		<result name="depart" >/jsps/department/department.jsp</result>
+		<result name="empl" >/jsps/employee/employee.jsp</result>
+		<result name="role">/jsps/role/role.jsp</result>
+		<result name="add" type="chain">ErpAction_departmentalManagement</result>
+		<result name="dite">/jsps/department/diteById.jsp</result>
+		</action>
+	    <action name="DepartmentAction_*" class="departmentAction" method="{1}">
+	    <result name="edit" type="chain">ErpAction_departmentalManagement</result>
+	    <result name="dele" type="chain">ErpAction_departmentalManagement</result>
+	    </action>
+	    <action name="EmployeeBy_*" class="employeeBy" method="{1}">
+	    <result name="add"  type="chain">ErpAction_employee</result>
+	    </action>
+	</package>
+	
+    
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+

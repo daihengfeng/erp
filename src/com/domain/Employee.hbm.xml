@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.domain.Employee" table="employee">
+		<id name="employee_Id" column="Employee_Id" >
+			<generator class="identity"/>
+		</id>
+		
+		<property name="employee_Name" column="Employee_Name"/>
+		<property name="employee_Id_No" column="Employee_Id_No"/>
+		<property name="gender" column="Gender"/>
+		<property name="born_Date" column="Born_Date"/>
+		<property name="degree" column="Degree"/>
+		<property name="school_Tag" column="School_Tag"/>
+		<property name="email" column="Email"/>
+		<property name="phone_No" column="Phone_No"/>
+		<property name="address" column="Address"/>
+		<property name="department_Id" column="Department_Id"/>
+		<property name="position_Id" column="Position_Id"/>
+		<property name="salary" column="Salary"/>
+		<property name="contract_Id" column="Contract_Id"/>
+		<property name="employee_Desc" column="Employee_Desc"/>
+		<property name="remark1"/>
+		<property name="remark2"/>
+	</class>
+</hibernate-mapping>    

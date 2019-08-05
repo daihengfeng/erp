@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.domain.Department" table="department">
+		<id name="department_Id" column="Department_Id" >
+			<generator class="native"/>
+		</id>
+		<property name="department_Name" column="Department_Name"/>
+		<property name="department_ParentId" column="Department_ParentId"/>
+		<property name="remark1"/>
+		<property name="remark2"/>
+	</class>
+</hibernate-mapping>    
